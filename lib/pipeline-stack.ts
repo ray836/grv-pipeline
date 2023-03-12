@@ -8,7 +8,7 @@ export class PipelineStack extends cdk.Stack {
     super(scope, id, props);
     
     new CodePipeline(this, 'Pipeline', {
-      pipelineName: 'TestPipeline',
+      pipelineName: 'TestPipeline2',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('ray836/grv-pipeline', 'main'),
         commands: ['npm ci',
